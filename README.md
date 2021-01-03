@@ -1,3 +1,3 @@
-# FoundationExtensions
+# Foundation Extensions
 
-A description of this package.
+The purpose of this project is to extend functionalities from the Foundation framework in Swift.
