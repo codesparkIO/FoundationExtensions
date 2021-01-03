@@ -19,4 +19,13 @@ extension String {
     func excludingCharacters(in characterSet: CharacterSet) -> String {
         return components(separatedBy: characterSet).joined()
     }
+    
+    /**
+     Returns a new `String` excluding any non-alphanumeric characters.
+     
+     - Returns: A new `String` without any non-alphanumeric characters.
+     */
+    func alphanumeric() -> String {
+        return excludingCharacters(in: CharacterSet.alphanumerics.inverted)
+    }
 }
