@@ -1,0 +1,16 @@
+# Reference: https://github.com/actions/labeler
+
+Test:
+  - Tests/**/*
+
+Documentation:
+  - ./**/*.md
+
+PackageUpdate:
+  - ./Package.swift
+
+GitHubAction:
+  - .github/**/*
+
+String:
+  - Sources/String/**/*
