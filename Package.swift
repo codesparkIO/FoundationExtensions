@@ -8,14 +8,17 @@ let package = Package(
     products: [
         .library(
             name: "FoundationExtensions",
-            targets: ["FoundationExtensions"]),
+            targets: ["FoundationExtensions"])
     ],
     targets: [
         .target(
             name: "FoundationExtensions",
-            dependencies: []),
+            dependencies: ["StringExtensions"]),
+        .target(
+            name: "StringExtensions",
+            path: "Sources/String"),
         .testTarget(
-            name: "FoundationExtensionsTests",
-            dependencies: ["FoundationExtensions"]),
+            name: "StringExtensionsTests",
+            dependencies: ["StringExtensions"])
     ]
 )
