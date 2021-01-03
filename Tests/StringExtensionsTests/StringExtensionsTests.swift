@@ -45,4 +45,29 @@ final class StringExtensionsTests: XCTestCase {
             testString.excludingCharacters(in: characterSet),
             emptyString)
     }
+    
+    // MARK: Tests func alphanumeric() -> String
+    
+    func testExcludingNonAlphanumericsFromString() {
+        let testString = ")0a!1b@2c#3d$4e%5f^6g&7h*8i(9j"
+        let testStringWithoutNonAlphanumerics = "0a1b2c3d4e5f6g7h8i9j"
+        XCTAssertEqual(
+            testString.alphanumeric(),
+            testStringWithoutNonAlphanumerics)
+    }
+    
+    func testExcludingNonAlphanumericsFromStringWithOnlyAlphanumerics() {
+        let testString = "0a1b2c3d4e5f6g7h8i9j"
+        XCTAssertEqual(
+            testString.alphanumeric(),
+            testString)
+    }
+    
+    func testExcludingNonAlphanumericsFromStringWithoutAnyAlphanumerics() {
+        let testString = ")!@#$%^&*("
+        let emptyString = ""
+        XCTAssertEqual(
+            testString.alphanumeric(),
+            emptyString)
+    }
 }
