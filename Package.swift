@@ -19,6 +19,14 @@ let package = Package(
             path: "Sources/String"),
         .testTarget(
             name: "StringExtensionsTests",
-            dependencies: ["StringExtensions"])
+            dependencies: [
+                "StringExtensions",
+                "CollectionExtensions"]),
+        .target(
+            name: "CollectionExtensions",
+            path: "Sources/Collection"),
+        .testTarget(
+            name: "CollectionExtensionsTests",
+            dependencies: ["CollectionExtensions"])
     ]
 )
