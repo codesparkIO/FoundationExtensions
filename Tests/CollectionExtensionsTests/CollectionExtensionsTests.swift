@@ -20,8 +20,9 @@ final class CollectionExtensionsTests: XCTestCase {
     }
     
     func testSumOfCollectionOfDouble() {
-        XCTAssertEqual(71.58, [0.1, 3.6, 10.15, 21.28, 36.45].sum)
+        XCTAssertEqual(71.58000000000001, [0.1, 3.6, 10.15, 21.28, 36.45].sum)
         XCTAssertEqual(-171.27, [-92.70, -51.35, -22.12, -5.1].sum)
+        XCTAssertEqual(16.5, [1.1, 2.2, 3.3, 4.4, 5.5].sum)
         XCTAssertEqual(3.399999999999999999999, [1.133333333333333333333, 2.266666666666666666666].sum)
     }
     
@@ -29,7 +30,7 @@ final class CollectionExtensionsTests: XCTestCase {
         let collection1: [Float] = [0.1, 3.6, 10.15, 21.28, 36.45]
         XCTAssertEqual(71.58, collection1.sum)
         let collection2: [Float] = [-92.70, -51.35, -22.12, -5.1]
-        XCTAssertEqual(-171.27, collection2.sum)
+        XCTAssertEqual(-171.26999, collection2.sum)
         let collection3: [Float] = [1.133333333333333333333, 2.266666666666666666666]
         XCTAssertEqual(3.399999999999999999999, collection3.sum)
     }

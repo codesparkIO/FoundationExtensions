@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Collection where Element: Numeric {
+extension Collection where Element: AdditiveArithmetic {
     /// The sum of all values in the array.
-    var sum: Self.Element { reduce(0, +) }
+    var sum: Element { reduce(.zero, +) }
 }
