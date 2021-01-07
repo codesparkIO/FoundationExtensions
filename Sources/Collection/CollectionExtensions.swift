@@ -11,3 +11,8 @@ extension Collection where Element: AdditiveArithmetic {
     /// The sum of all values in the array.
     var sum: Element { reduce(.zero, +) }
 }
+
+extension Collection where Element: NSNumber {
+    /// The sum of all values in the array.
+    var sum: NSDecimalNumber { reduce(NSDecimalNumber(value: 0.0)) { $0.adding(NSDecimalNumber(decimal: $1.decimalValue)) } }
+}
